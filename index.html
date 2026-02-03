@@ -399,7 +399,7 @@ def lex(src: str):
             col += 1
             push("STRING", "".join(out), ln, cl)
             continue
-        ##THIS PART IS 100% WRITTEN BY AI"
+  
         if ch.isdigit():
             ln, cl = line, col
             j = i
@@ -421,7 +421,7 @@ def lex(src: str):
             col += (j - i)
             i = j
             continue
-        ##END OF AI-WRITTEN PART##
+      
         if ch.isalpha() or ch == "_":
             ln, cl = line, col
             j = i
