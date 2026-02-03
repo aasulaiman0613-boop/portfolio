@@ -25,14 +25,13 @@
       <nav class="nav">
         <a class="navLink" href="#skills">Skills</a>
         <a class="navLink" href="#projects">Projects</a>
+        <a class="navLink" href="#kidlang">KidLang</a>
         <a class="navLink" href="#experience">Experience</a>
         <a class="navLink" href="#contact">Contact</a>
       </nav>
 
       <div class="topActions">
-        <button class="iconBtn" id="copySite" type="button" title="Copy site URL">
-          Copy URL
-        </button>
+        <button class="iconBtn" id="copySite" type="button" title="Copy site URL">Copy URL</button>
         <a class="btn" href="#contact">Hire / Contact</a>
       </div>
     </div>
@@ -58,7 +57,7 @@
 
         <div class="heroCtas">
           <a class="btn" href="#projects">View projects</a>
-          <a class="btn ghost" href="#skills">Technical skills</a>
+          <a class="btn ghost" href="#kidlang">KidLang details</a>
         </div>
 
         <div class="pillRow">
@@ -96,13 +95,13 @@
 
         <div class="heroCard secondary">
           <div class="heroCardTop">
-            <h2>Featured demo</h2>
-            <span class="chip alt">Video</span>
+            <h2>KidLang demo</h2>
+            <span class="chip alt">YouTube</span>
           </div>
           <p class="muted">
-            Black Hole Physics Sandbox — real-time gravity simulation tuned for stability under load.
+            Demonstration of parsing and statement dispatch logic inside the compiler pipeline.
           </p>
-          <a class="btn wide" href="https://youtu.be/2vVi5yfS_fo" target="_blank" rel="noreferrer">Watch on YouTube</a>
+          <a class="btn wide" href="#kidlang">Open KidLang section</a>
         </div>
       </div>
     </div>
@@ -173,7 +172,7 @@
           </div>
 
           <div class="projectActions">
-            <button class="btn ghost" type="button" data-toast="Add a public repo link here later">Add repo link (later)</button>
+            <a class="btn ghost" href="#kidlang">See code snippets</a>
           </div>
         </article>
 
@@ -194,6 +193,149 @@
 
           <div class="projectActions">
             <a class="btn" href="https://youtu.be/2vVi5yfS_fo" target="_blank" rel="noreferrer">Open demo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="kidlang" class="section reveal">
+      <div class="sectionHead">
+        <div>
+          <h2>KidLang</h2>
+          <p class="muted">Demo video + representative compiler pipeline snippets.</p>
+        </div>
+      </div>
+
+      <div class="grid2 kidGrid">
+        <article class="panel">
+          <div class="panelTop">
+            <h3>YouTube demo</h3>
+            <span class="panelTag">Live walkthrough</span>
+          </div>
+
+          <div class="videoWrap" aria-label="KidLang demo video">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/LdH57x1eT08"
+              title="KidLang demonstration"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="dashList">
+            <div class="dashItem"><span class="dash">–</span><span><b>Video:</b> <a class="link" href="https://youtu.be/LdH57x1eT08" target="_blank" rel="noreferrer">Open on YouTube</a></span></div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panelTop">
+            <h3>Parser snippet</h3>
+            <span class="panelTag">parser.py</span>
+          </div>
+
+          <div class="codeBlock">
+            <div class="codeTop">
+              <span class="codeFile">parser.py</span>
+              <div class="codeBtns">
+                <button class="codeBtn" type="button" data-copy="#codeParser">Copy</button>
+              </div>
+            </div>
+            <pre><code id="codeParser">def statement(self):
+    t = self.cur()
+    if self.at("KW", "let"):
+        return self.let_stmt()
+    if self.at("KW", "if"):
+        return self.if_stmt()
+    if self.at("KW", "while"):
+        return self.while_stmt()
+    if self.at("KW", "for"):
+        return self.for_range_stmt()
+    if self.at("KW", "break"):
+        ln = t.line
+        self.eat("KW", "break")
+        return A.BreakStmt(line=ln)
+    if self.at("KW", "continue"):
+        ln = t.line
+        self.eat("KW", "continue")
+        return A.ContinueStmt(line=ln)
+    if self.at("KW", "fun"):
+        return self.fun_def()
+    if self.at("KW", "return"):
+        return self.return_stmt()</code></pre>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panelTop">
+            <h3>Lexer snippet</h3>
+            <span class="panelTag">lexer.py</span>
+          </div>
+
+          <div class="codeBlock">
+            <div class="codeTop">
+              <span class="codeFile">lexer.py</span>
+              <div class="codeBtns">
+                <button class="codeBtn" type="button" data-copy="#codeLexer">Copy</button>
+              </div>
+            </div>
+            <pre><code id="codeLexer">from tokens import Token
+
+KEYWORDS = {
+    "let",
+    "if", "then", "else", "elseif", "end",
+    "while", "do",
+    "for", "to", "step",
+    "fun", "return",
+    "true", "false", "null",
+    "and", "or", "not",
+    "break", "continue",
+}
+
+SINGLE = {
+    "(": "LPAREN",
+    ")": "RPAREN",
+    "[": "LBRACK",
+    "]": "RBRACK",
+    "{": "LBRACE",
+    "}": "RBRACE",
+    ",": "COMMA",
+    ":": "COLON",
+    "+": "PLUS",
+    "-": "MINUS",
+    "*": "STAR",
+    "/": "SLASH",
+    "=": "EQUAL",
+}
+
+DOUBLE = {
+    "==": "EQEQ",
+    "!=": "NOTEQ",
+    "<=": "LTE",
+    ">=": "GTE",
+}
+
+SINGLE2 = {
+    "&lt;": "LT",
+    "&gt;": "GT",
+}</code></pre>
+          </div>
+
+          <p class="muted note">
+            Note: the &lt; and &gt; are HTML-escaped so the code renders correctly in the browser.
+          </p>
+        </article>
+
+        <article class="panel">
+          <div class="panelTop">
+            <h3>What this shows</h3>
+            <span class="panelTag">Design</span>
+          </div>
+
+          <div class="dashList">
+            <div class="dashItem"><span class="dash">–</span><span>Statement dispatch is explicit and predictable (easy to extend, easy to test).</span></div>
+            <div class="dashItem"><span class="dash">–</span><span>Keyword sets and token maps are centralized for clean lexer behavior.</span></div>
+            <div class="dashItem"><span class="dash">–</span><span>Snippets are copyable for quick review and discussions with collaborators.</span></div>
           </div>
         </article>
       </div>
@@ -320,7 +462,6 @@
         copyText(discordUser);
 
         var opened = false;
-
         try {
           var a = document.createElement("a");
           a.href = "discord://-/";
@@ -331,8 +472,7 @@
         } catch(e) {}
 
         setTimeout(function(){
-          if (!opened) window.open("https://discord.com/app", "_blank", "noreferrer");
-          else window.open("https://discord.com/app", "_blank", "noreferrer");
+          window.open("https://discord.com/app", "_blank", "noreferrer");
         }, 250);
       });
     }
@@ -343,6 +483,19 @@
         copyText(window.location.href);
       });
     }
+
+    document.addEventListener("click", function(ev){
+      var t = ev.target;
+      while (t && t !== document.body) {
+        var sel = t.getAttribute && t.getAttribute("data-copy");
+        if (sel) {
+          var node = document.querySelector(sel);
+          if (node) copyText(node.innerText);
+          break;
+        }
+        t = t.parentNode;
+      }
+    });
 
     var revealEls = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
     var io = new IntersectionObserver(function(entries){
@@ -373,15 +526,6 @@
     }, { rootMargin: "-45% 0px -45% 0px", threshold: 0.01 });
 
     sections.forEach(function(s){ spy.observe(s); });
-
-    document.addEventListener("click", function(ev){
-      var t = ev.target;
-      while (t && t !== document.body) {
-        var msg = t.getAttribute && t.getAttribute("data-toast");
-        if (msg) { toast(msg); break; }
-        t = t.parentNode;
-      }
-    });
   </script>
 </body>
 </html>
