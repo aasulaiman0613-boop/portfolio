@@ -9,179 +9,379 @@
 </head>
 
 <body>
-  <header class="site">
-    <div class="wrap">
-      <div class="top">
-        <div>
-          <p class="kicker">CollectorXVIII</p>
-          <h1>Software Engineer & Roblox Scripter</h1>
-          <p class="sub">Systems Architecture · Physics Simulations · Compiler Design</p>
-        </div>
+  <div class="bgOrbs" aria-hidden="true">
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+  </div>
 
-        <div class="cta">
-          <a class="btn" href="#contact">Contact</a>
-          <a class="btn ghost" href="#projects">Projects</a>
-        </div>
-      </div>
+  <header class="topbar" id="top">
+    <div class="wrap topbarInner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brandDot"></span>
+        <span class="brandText">CollectorXVIII</span>
+      </a>
 
-      <div class="cards">
-        <article class="card">
-          <h2>Portfolio overview</h2>
-          <ul>
-            <li><b>Strengths:</b> Advanced Luau and Python, compiler/transpiler design, AI behaviours, high-performance physics simulations.</li>
-            <li><b>Technical depth:</b> Calculus, Linear Algebra, Differential Equations applied to kinematics, orbital mechanics, and runtimes.</li>
-            <li><b>Flagship:</b> KidLang, Black Hole Physics Sandbox, Dynamic NPC Ecosystem.</li>
-            <li><b>Development style:</b> Architecture-first planning, incremental milestones, rigorous testing.</li>
-          </ul>
-        </article>
+      <nav class="nav">
+        <a class="navLink" href="#skills">Skills</a>
+        <a class="navLink" href="#projects">Projects</a>
+        <a class="navLink" href="#experience">Experience</a>
+        <a class="navLink" href="#contact">Contact</a>
+      </nav>
 
-        <article class="card">
-          <h2>Highlights</h2>
-          <div class="pillrow">
-            <span class="pill">Luau</span>
-            <span class="pill">Python</span>
-            <span class="pill">C++17</span>
-            <span class="pill">Physics</span>
-            <span class="pill">AST / Parsers</span>
-            <span class="pill">Client–Server</span>
-            <span class="pill">Datastores</span>
-            <span class="pill">Optimisation</span>
-          </div>
-          <p class="muted">
-            Focused on performance, stability, and systems that hold up under real server load.
-          </p>
-        </article>
+      <div class="topActions">
+        <button class="iconBtn" id="copySite" type="button" title="Copy site URL">
+          Copy URL
+        </button>
+        <a class="btn" href="#contact">Hire / Contact</a>
       </div>
     </div>
   </header>
 
+  <section class="hero">
+    <div class="wrap heroInner">
+      <div class="heroLeft">
+        <p class="kicker">CollectorXVIII</p>
+        <h1 class="headline">Software Engineer & Roblox Scripter</h1>
+        <p class="subhead">Systems Architecture · Physics Simulations · Compiler Design</p>
+
+        <div class="heroMeta">
+          <div class="stat">
+            <div class="statTop">Core strengths</div>
+            <div class="statBottom">Luau · Python · Compilers · Physics</div>
+          </div>
+          <div class="stat">
+            <div class="statTop">Style</div>
+            <div class="statBottom">Architecture-first · Incremental · Tested</div>
+          </div>
+        </div>
+
+        <div class="heroCtas">
+          <a class="btn" href="#projects">View projects</a>
+          <a class="btn ghost" href="#skills">Technical skills</a>
+        </div>
+
+        <div class="pillRow">
+          <span class="pill">Luau</span>
+          <span class="pill">Python</span>
+          <span class="pill">C++17</span>
+          <span class="pill">Physics</span>
+          <span class="pill">AST / Parsers</span>
+          <span class="pill">Client–Server</span>
+          <span class="pill">Datastores</span>
+          <span class="pill">Optimisation</span>
+        </div>
+      </div>
+
+      <div class="heroRight">
+        <div class="heroCard">
+          <div class="heroCardTop">
+            <h2>Portfolio overview</h2>
+            <span class="chip">Systems</span>
+          </div>
+
+          <div class="dashList">
+            <div class="dashItem"><span class="dash">–</span><span><b>Strengths:</b> Advanced Luau and Python, compiler/transpiler design, AI behaviours, high-performance physics simulations.</span></div>
+            <div class="dashItem"><span class="dash">–</span><span><b>Technical depth:</b> Calculus, Linear Algebra, Differential Equations applied to kinematics, orbital mechanics, and runtimes.</span></div>
+            <div class="dashItem"><span class="dash">–</span><span><b>Flagship:</b> KidLang, Black Hole Physics Sandbox, Dynamic NPC Ecosystem.</span></div>
+            <div class="dashItem"><span class="dash">–</span><span><b>Approach:</b> Conservative engineering, architecture-first planning, incremental milestones, rigorous testing.</span></div>
+          </div>
+
+          <div class="heroCardFooter">
+            <a class="miniLink" href="#projects">Jump to projects</a>
+            <span class="dotSep">•</span>
+            <a class="miniLink" href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="heroCard secondary">
+          <div class="heroCardTop">
+            <h2>Featured demo</h2>
+            <span class="chip alt">Video</span>
+          </div>
+          <p class="muted">
+            Black Hole Physics Sandbox — real-time gravity simulation tuned for stability under load.
+          </p>
+          <a class="btn wide" href="https://youtu.be/2vVi5yfS_fo" target="_blank" rel="noreferrer">Watch on YouTube</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <main class="wrap">
-    <section id="skills" class="section">
+    <section id="skills" class="section reveal">
       <div class="sectionHead">
-        <h2>Technical skills</h2>
-        <p class="muted">Core competencies across systems engineering and Roblox gameplay architecture.</p>
+        <div>
+          <h2>Technical skills</h2>
+          <p class="muted">Core competencies across systems engineering and Roblox gameplay architecture.</p>
+        </div>
       </div>
 
       <div class="grid2">
         <article class="panel">
-          <h3>Python & systems engineering</h3>
-          <ul>
-            <li><b>Compiler design:</b> Lexers, recursive descent parsers, AST design.</li>
-            <li><b>Transpilation:</b> Mapping high-level syntax to optimised C++17 output.</li>
-            <li><b>Tooling:</b> Custom IDEs and build systems using Python + Tkinter.</li>
-            <li><b>Automation:</b> Version control verification and basic code-security scripting.</li>
-          </ul>
+          <div class="panelTop">
+            <h3>Python & systems engineering</h3>
+            <span class="panelTag">Compiler / Tooling</span>
+          </div>
+
+          <div class="dashList">
+            <div class="dashItem"><span class="dash">–</span><span><b>Compiler design:</b> Lexers, recursive descent parsers, AST design.</span></div>
+            <div class="dashItem"><span class="dash">–</span><span><b>Transpilation:</b> Mapping high-level syntax to optimised C++17 output.</span></div>
+            <div class="dashItem"><span class="dash">–</span><span><b>Tooling:</b> Custom IDEs and build systems using Python + Tkinter.</span></div>
+            <div class="dashItem"><span class="dash">–</span><span><b>Automation:</b> Version control verification and basic code-security scripting.</span></div>
+          </div>
         </article>
 
         <article class="panel">
-          <h3>Roblox Luau scripting</h3>
-          <ul>
-            <li><b>Advanced Luau:</b> Client-server architecture, custom physics engines, memory-aware data structures.</li>
-            <li><b>Physics:</b> Non-standard gravity, fluid-like simulations, vector-based orbital mechanics.</li>
-            <li><b>Persistence:</b> Datastores with robust error handling and session locking.</li>
-          </ul>
+          <div class="panelTop">
+            <h3>Roblox Luau scripting</h3>
+            <span class="panelTag">Gameplay / Networking</span>
+          </div>
+
+          <div class="dashList">
+            <div class="dashItem"><span class="dash">–</span><span><b>Advanced Luau:</b> Client-server architecture, custom physics engines, memory-aware data structures.</span></div>
+            <div class="dashItem"><span class="dash">–</span><span><b>Physics:</b> Non-standard gravity, fluid-like simulations, vector-based orbital mechanics.</span></div>
+            <div class="dashItem"><span class="dash">–</span><span><b>Persistence:</b> Datastores with robust error handling and session locking.</span></div>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="projects" class="section">
+    <section id="projects" class="section reveal">
       <div class="sectionHead">
-        <h2>Featured projects</h2>
-        <p class="muted">Selected work demonstrating compiler engineering and real-time simulation systems.</p>
+        <div>
+          <h2>Featured projects</h2>
+          <p class="muted">Selected work demonstrating compiler engineering and real-time simulation systems.</p>
+        </div>
       </div>
 
       <div class="stack">
         <article class="project">
           <div class="projectTop">
-            <h3>KidLang: Custom Programming Language and Transpiler</h3>
-            <span class="tag">Language / Compiler</span>
+            <div>
+              <h3>KidLang: Custom Programming Language and Transpiler</h3>
+              <p class="muted tight">Python front-end → optimised C++17 output.</p>
+            </div>
+            <span class="badge">Language / Compiler</span>
           </div>
-          <p>
-            A fully functional programming language with a Python front-end that transpiles to high-performance C++17.
-            Built to bridge beginner-friendly syntax and machine-level execution.
-          </p>
-          <ul class="mini">
-            <li><b>Tech:</b> Python (lexer/parser), C++17 runtime (std::variant), Windows shell build automation.</li>
-            <li><b>Key innovation:</b> Custom type system (<span class="mono">kl::Val</span>) enabling dynamic types in a statically typed backend.</li>
-            <li><b>Outcome:</b> Handles complex loops and nested logic; validated for architectural soundness.</li>
-          </ul>
+
+          <div class="dashList">
+            <div class="dashItem"><span class="dash">–</span><span><b>Description:</b> Fully functional language bridging beginner syntax and machine-level execution.</span></div>
+            <div class="dashItem"><span class="dash">–</span><span><b>Technologies:</b> Python (lexer/parser), C++17 runtime (std::variant), Windows shell build automation.</span></div>
+            <div class="dashItem"><span class="dash">–</span><span><b>Key innovation:</b> Custom type system (<span class="mono">kl::Val</span>) enabling dynamic types in a statically typed backend.</span></div>
+            <div class="dashItem"><span class="dash">–</span><span><b>Outcome:</b> Complex loops + nested logic; validated for architectural soundness.</span></div>
+          </div>
+
+          <div class="projectActions">
+            <button class="btn ghost" type="button" data-toast="Add a public repo link here later">Add repo link (later)</button>
+          </div>
         </article>
 
         <article class="project">
           <div class="projectTop">
-            <h3>Black Hole Physics Sandbox (Roblox)</h3>
-            <span class="tag">Physics / Simulation</span>
+            <div>
+              <h3>Black Hole Physics Sandbox (Roblox)</h3>
+              <p class="muted tight">Newtonian gravity + stability tuning for real-time simulation.</p>
+            </div>
+            <span class="badge alt">Physics / Simulation</span>
           </div>
-          <p>
-            Real-time gravitational simulation based on Newtonian gravity and inverse-square behaviour,
-            using vector acceleration updates and adaptive timesteps to stay stable near the event horizon.
-          </p>
-          <ul class="mini">
-            <li><b>Optimisation:</b> CollectionService pipelines + energy-decay strategies for large debris counts.</li>
-            <li><b>Video demo:</b> <a href="https://youtu.be/2vVi5yfS_fo" target="_blank" rel="noreferrer">YouTube</a></li>
-          </ul>
+
+          <div class="dashList">
+            <div class="dashItem"><span class="dash">–</span><span><b>The science:</b> Vector acceleration updates + adaptive timesteps for stability near the event horizon.</span></div>
+            <div class="dashItem"><span class="dash">–</span><span><b>Optimisation:</b> CollectionService pipelines + energy-decay strategies for large debris counts.</span></div>
+            <div class="dashItem"><span class="dash">–</span><span><b>Video demo:</b> <a class="link" href="https://youtu.be/2vVi5yfS_fo" target="_blank" rel="noreferrer">YouTube</a></span></div>
+          </div>
+
+          <div class="projectActions">
+            <a class="btn" href="https://youtu.be/2vVi5yfS_fo" target="_blank" rel="noreferrer">Open demo</a>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="experience" class="section">
+    <section id="experience" class="section reveal">
       <div class="sectionHead">
-        <h2>Experience & education</h2>
-        <p class="muted">Background and working style.</p>
+        <div>
+          <h2>Experience & education</h2>
+          <p class="muted">Background and working style.</p>
+        </div>
       </div>
 
       <div class="grid2">
         <article class="panel">
-          <h3>Experience</h3>
-          <ul>
-            <li><b>Roblox development:</b> 5+ years in Luau environments.</li>
-            <li><b>Systems design:</b> 2–3 years in multi-developer repos (standards, clean-code practices).</li>
-            <li><b>Education:</b> Self-taught (compiler theory, C++ docs, advanced physics research).</li>
-          </ul>
+          <div class="panelTop">
+            <h3>Experience</h3>
+            <span class="panelTag">Production</span>
+          </div>
+
+          <div class="dashList">
+            <div class="dashItem"><span class="dash">–</span><span><b>Roblox development:</b> 5+ years in Luau environments.</span></div>
+            <div class="dashItem"><span class="dash">–</span><span><b>Systems design:</b> 2–3 years in multi-developer repos (standards, clean-code practices).</span></div>
+            <div class="dashItem"><span class="dash">–</span><span><b>Education:</b> Self-taught (compiler theory, C++ docs, advanced physics research).</span></div>
+          </div>
         </article>
 
         <article class="panel">
-          <h3>Math & simulation focus</h3>
-          <ul>
-            <li>Linear algebra applied to real-time transforms and constraints.</li>
-            <li>Physics-based problem solving for stable server simulations.</li>
-            <li>Emphasis on numerical stability and performance under load.</li>
-          </ul>
+          <div class="panelTop">
+            <h3>Math & simulation focus</h3>
+            <span class="panelTag">Stability</span>
+          </div>
+
+          <div class="dashList">
+            <div class="dashItem"><span class="dash">–</span><span>Linear algebra applied to real-time transforms and constraints.</span></div>
+            <div class="dashItem"><span class="dash">–</span><span>Physics-based problem solving for stable server simulations.</span></div>
+            <div class="dashItem"><span class="dash">–</span><span>Emphasis on numerical stability and performance under load.</span></div>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section reveal">
       <div class="sectionHead">
-        <h2>Contact</h2>
-        <p class="muted">Fastest ways to reach me.</p>
+        <div>
+          <h2>Contact</h2>
+          <p class="muted">Click any row to open the right app (or copy where needed).</p>
+        </div>
       </div>
 
-      <div class="contact">
+      <div class="contactGrid">
         <a class="contactRow" href="mailto:collectordevelopment6@gmail.com">
           <span class="label">Email</span>
           <span class="value">collectordevelopment6@gmail.com</span>
+          <span class="hint">Opens mail</span>
         </a>
 
-        <div class="contactRow">
+        <button class="contactRow btnRow" id="discordRow" type="button">
           <span class="label">Discord</span>
-          <span class="value">collector668</span>
-        </div>
+          <span class="value mono">collector668</span>
+          <span class="hint">Copies + opens Discord</span>
+        </button>
 
         <a class="contactRow" href="https://www.roblox.com/users/2882137577/profile" target="_blank" rel="noreferrer">
           <span class="label">Roblox</span>
           <span class="value">Profile</span>
+          <span class="hint">Opens in browser</span>
         </a>
       </div>
 
       <footer class="foot">
-        <p class="muted">© <span id="y"></span> CollectorXVIII. Built with HTML/CSS and hosted on GitHub Pages.</p>
+        <div class="footInner">
+          <p class="muted">© <span id="y"></span> CollectorXVIII. Built with HTML/CSS + vanilla JS on GitHub Pages.</p>
+          <a class="miniLink" href="#top">Back to top</a>
+        </div>
       </footer>
     </section>
   </main>
 
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+    var yearEl = document.getElementById("y");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    function toast(msg){
+      var el = document.getElementById("toast");
+      if (!el) return;
+      el.textContent = msg;
+      el.classList.add("show");
+      clearTimeout(el._t);
+      el._t = setTimeout(function(){ el.classList.remove("show"); }, 2200);
+    }
+
+    function copyText(text){
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function(){
+          toast("Copied: " + text);
+        }).catch(function(){
+          fallbackCopy(text);
+        });
+      } else {
+        fallbackCopy(text);
+      }
+    }
+
+    function fallbackCopy(text){
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try { document.execCommand("copy"); toast("Copied: " + text); }
+      catch(e){ toast("Copy failed"); }
+      document.body.removeChild(ta);
+    }
+
+    var discordUser = "collector668";
+    var discordBtn = document.getElementById("discordRow");
+    if (discordBtn) {
+      discordBtn.addEventListener("click", function(){
+        copyText(discordUser);
+
+        var opened = false;
+
+        try {
+          var a = document.createElement("a");
+          a.href = "discord://-/";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          opened = true;
+        } catch(e) {}
+
+        setTimeout(function(){
+          if (!opened) window.open("https://discord.com/app", "_blank", "noreferrer");
+          else window.open("https://discord.com/app", "_blank", "noreferrer");
+        }, 250);
+      });
+    }
+
+    var copySite = document.getElementById("copySite");
+    if (copySite) {
+      copySite.addEventListener("click", function(){
+        copyText(window.location.href);
+      });
+    }
+
+    var revealEls = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) {
+          e.target.classList.add("in");
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function(el){ io.observe(el); });
+
+    var links = Array.prototype.slice.call(document.querySelectorAll(".navLink"));
+    var sections = links.map(function(a){
+      var id = a.getAttribute("href");
+      return document.querySelector(id);
+    }).filter(Boolean);
+
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) {
+          var id = "#" + e.target.id;
+          links.forEach(function(a){
+            a.classList.toggle("active", a.getAttribute("href") === id);
+          });
+        }
+      });
+    }, { rootMargin: "-45% 0px -45% 0px", threshold: 0.01 });
+
+    sections.forEach(function(s){ spy.observe(s); });
+
+    document.addEventListener("click", function(ev){
+      var t = ev.target;
+      while (t && t !== document.body) {
+        var msg = t.getAttribute && t.getAttribute("data-toast");
+        if (msg) { toast(msg); break; }
+        t = t.parentNode;
+      }
+    });
   </script>
 </body>
 </html>
