@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CollectorXVIII | Software Engineer & Roblox Scripter</title>
-  <meta name="description" content="CollectorXVIII — Systems Architecture, Physics Simulations, Compiler Design. Roblox Luau + Python." />
+  <meta name="description" content="CollectorXVIII - Systems Architecture, Physics Simulations, Compiler Design. Roblox Luau and Python." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -25,7 +25,7 @@
       <nav class="nav">
         <a class="navLink" href="#skills">Skills</a>
         <a class="navLink" href="#projects">Projects</a>
-        <a class="navLink" href="#kidlang">KidLang</a>
+        <a class="navLink" href="#demos">Demos</a>
         <a class="navLink" href="#services">Services</a>
         <a class="navLink" href="#experience">Experience</a>
         <a class="navLink" href="#contact">Contact</a>
@@ -42,7 +42,7 @@
     <div class="wrap heroInner">
       <div class="heroLeft">
         <p class="kicker">CollectorXVIII</p>
-        <h1 class="headline">Software Engineer & Roblox Scripter</h1>
+        <h1 class="headline">Software Engineer and Roblox Scripter</h1>
         <p class="subhead">Systems Architecture, Physics Simulations, Compiler Design</p>
 
         <div class="heroMeta">
@@ -58,7 +58,7 @@
 
         <div class="heroCtas">
           <a class="btn" href="#projects">View projects</a>
-          <a class="btn ghost" href="#kidlang">Watch demos</a>
+          <a class="btn ghost" href="#demos">Watch demos</a>
         </div>
 
         <div class="pillRow">
@@ -67,7 +67,7 @@
           <span class="pill">C++17</span>
           <span class="pill">Physics</span>
           <span class="pill">AST / Parsers</span>
-          <span class="pill">Client–Server</span>
+          <span class="pill">Client-server</span>
           <span class="pill">Datastores</span>
           <span class="pill">Optimisation</span>
         </div>
@@ -81,9 +81,9 @@
           </div>
 
           <ul class="cleanList">
-            <li><b>Strengths:</b> Advanced Luau and Python, compiler and transpiler design, AI behaviours, high-performance physics simulations.</li>
+            <li><b>Strengths:</b> Advanced Luau and Python, compiler and transpiler design, AI behaviour systems, high-performance simulations.</li>
             <li><b>Technical depth:</b> Calculus, Linear Algebra, Differential Equations applied to kinematics, orbital mechanics, and runtimes.</li>
-            <li><b>Flagship:</b> KidLang, Black Hole Physics Sandbox, Dynamic NPC Ecosystem.</li>
+            <li><b>Flagship:</b> KidLang, Black Hole Physics Sandbox, Server-authoritative NPC AI.</li>
             <li><b>Approach:</b> Conservative engineering, architecture-first planning, incremental milestones, rigorous testing.</li>
           </ul>
 
@@ -96,13 +96,13 @@
 
         <div class="heroCard secondary">
           <div class="heroCardTop">
-            <h2>Featured demos</h2>
+            <h2>Showcase</h2>
             <span class="chip alt">YouTube</span>
           </div>
           <p class="muted">
-            KidLang demonstration plus the Black Hole Physics Sandbox showcase.
+            System demos for KidLang, the physics sandbox, and server-authoritative NPC AI.
           </p>
-          <a class="btn wide" href="#kidlang">Open demos</a>
+          <a class="btn wide" href="#demos">Open demos</a>
         </div>
       </div>
     </div>
@@ -139,8 +139,8 @@
           </div>
 
           <ul class="cleanList">
-            <li><b>Advanced Luau:</b> Client-server architecture, custom physics engines, memory-aware data structures.</li>
-            <li><b>Physics:</b> Non-standard gravity, fluid-like simulations, vector-based orbital mechanics.</li>
+            <li><b>Advanced Luau:</b> Client-server architecture, custom physics, memory-aware data structures.</li>
+            <li><b>Physics:</b> Non-standard gravity, fluid-like simulation, vector-based orbital mechanics.</li>
             <li><b>Persistence:</b> Datastores with robust error handling and session locking.</li>
           </ul>
         </article>
@@ -151,7 +151,7 @@
       <div class="sectionHead">
         <div>
           <h2>Featured projects</h2>
-          <p class="muted">Selected work demonstrating compiler engineering and real-time simulation systems.</p>
+          <p class="muted">Selected work demonstrating compiler engineering, simulation stability, and server-authoritative AI.</p>
         </div>
       </div>
 
@@ -166,14 +166,36 @@
           </div>
 
           <ul class="cleanList">
-            <li><b>Description:</b> Fully functional language bridging beginner syntax and machine-level execution.</li>
-            <li><b>Technologies:</b> Python (lexer and parser), C++17 runtime (std::variant), Windows shell build automation.</li>
-            <li><b>Key innovation:</b> Custom type system (kl::Val) enabling dynamic types in a statically typed backend.</li>
-            <li><b>Outcome:</b> Handles complex loops and nested logic, validated for architectural soundness.</li>
+            <li><b>Description:</b> A custom language designed for beginner-friendly syntax with a high-performance runtime target.</li>
+            <li><b>Pipeline:</b> Tokenization, parsing, AST generation, and C++ output generation.</li>
+            <li><b>Outcome:</b> Supports nested logic and loops with predictable semantics and a clean type model.</li>
           </ul>
 
           <div class="projectActions">
-            <a class="btn" href="#kidlang">Watch demos</a>
+            <a class="btn" href="#demos">Watch demos</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="projectTop">
+            <div>
+              <h3>Server-Authoritative NPC AI (Roblox)</h3>
+              <p class="muted tight">Server-side perception, targeting, navigation, and damage validation.</p>
+            </div>
+            <span class="badge alt">AI</span>
+          </div>
+
+          <ul class="cleanList">
+            <li><b>Architecture:</b> Fully server-authoritative AI. The server owns movement, perception, target selection, pathing, and damage.</li>
+            <li><b>Modular systems:</b> Vision, hearing, navigation, combat, and stimulus processing run inside a controlled update loop with throttled decisions to avoid jitter.</li>
+            <li><b>Vision:</b> True line-of-sight with field-of-view checks and raycasts, with immediate loss and fast reacquire when visibility changes.</li>
+            <li><b>Hearing:</b> Directional, probabilistic noise events (distance and type weighted) with intentional position offsets, so the NPC investigates an area instead of locking onto exact coordinates.</li>
+            <li><b>Movement and combat:</b> PathfindingService with tuned agent parameters, repath intervals, stuck recovery, intentional stop distance, plus server-run close-range attacks with cooldowns and a touch-kill safeguard.</li>
+            <li><b>Anti-exploit:</b> Server validates all targeting and damage, collision groups prevent player blocking, and unstable humanoid states are disabled for consistent physics.</li>
+          </ul>
+
+          <div class="projectActions">
+            <a class="btn" href="#demos">Watch showcase</a>
           </div>
         </article>
 
@@ -183,13 +205,13 @@
               <h3>Black Hole Physics Sandbox (Roblox)</h3>
               <p class="muted tight">Newtonian gravity with stability tuning for real-time simulation.</p>
             </div>
-            <span class="badge alt">Simulation</span>
+            <span class="badge">Simulation</span>
           </div>
 
           <ul class="cleanList">
-            <li><b>The science:</b> Vector acceleration updates and adaptive timesteps for stability near the event horizon.</li>
+            <li><b>Physics model:</b> Vector acceleration updates with adaptive timesteps for stability near the event horizon.</li>
             <li><b>Optimisation:</b> CollectionService pipelines and energy-decay strategies for large debris counts.</li>
-            <li><b>Video demo:</b> <a class="link" href="https://youtu.be/2vVi5yfS_fo" target="_blank" rel="noreferrer">Open on YouTube</a></li>
+            <li><b>Video:</b> <a class="link" href="https://youtu.be/2vVi5yfS_fo" target="_blank" rel="noreferrer">Open on YouTube</a></li>
           </ul>
 
           <div class="projectActions">
@@ -199,7 +221,7 @@
       </div>
     </section>
 
-    <section id="kidlang" class="section reveal">
+    <section id="demos" class="section reveal">
       <div class="sectionHead">
         <div>
           <h2>Demos</h2>
@@ -231,6 +253,29 @@
 
         <article class="panel">
           <div class="panelTop">
+            <h3>Server-authoritative NPC AI showcase</h3>
+            <span class="panelTag">YouTube</span>
+          </div>
+
+          <div class="videoWrap" aria-label="Server-authoritative NPC AI video">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/9Arf3RqUI-w"
+              title="Server-authoritative NPC AI showcase"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <p class="muted note">
+            <a class="link" href="https://youtu.be/9Arf3RqUI-w" target="_blank" rel="noreferrer">Open on YouTube</a>
+          </p>
+        </article>
+      </div>
+
+      <div class="grid2 kidGrid">
+        <article class="panel">
+          <div class="panelTop">
             <h3>Black Hole Physics Sandbox</h3>
             <span class="panelTag">YouTube</span>
           </div>
@@ -248,6 +293,18 @@
           <p class="muted note">
             <a class="link" href="https://youtu.be/2vVi5yfS_fo" target="_blank" rel="noreferrer">Open on YouTube</a>
           </p>
+        </article>
+
+        <article class="panel">
+          <div class="panelTop">
+            <h3>Optional slot</h3>
+            <span class="panelTag">Reserved</span>
+          </div>
+
+          <ul class="cleanList">
+            <li>Add another demo here later if you want a fourth video slot.</li>
+            <li>Keep the grid balanced for a clean layout.</li>
+          </ul>
         </article>
       </div>
     </section>
