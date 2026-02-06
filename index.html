@@ -83,7 +83,7 @@
           <ul class="cleanList">
             <li><b>Strengths:</b> Advanced Luau and Python, compiler and transpiler design, AI behaviour systems, high-performance simulations.</li>
             <li><b>Technical depth:</b> Calculus, Linear Algebra, Differential Equations applied to kinematics, orbital mechanics, and runtimes.</li>
-            <li><b>Flagship:</b> KidLang, Black Hole Physics Sandbox, Server-authoritative NPC AI.</li>
+            <li><b>Flagship:</b> KidLang, Black Hole Physics Sandbox, Server-authoritative NPC AI, SQLite document store.</li>
             <li><b>Approach:</b> Conservative engineering, architecture-first planning, incremental milestones, rigorous testing.</li>
           </ul>
 
@@ -100,7 +100,7 @@
             <span class="chip alt">YouTube</span>
           </div>
           <p class="muted">
-            System demos for KidLang, the physics sandbox, and server-authoritative NPC AI.
+            System demos for KidLang, the physics sandbox, server-authoritative NPC AI, and database architecture.
           </p>
           <a class="btn wide" href="#demos">Open demos</a>
         </div>
@@ -151,7 +151,7 @@
       <div class="sectionHead">
         <div>
           <h2>Featured projects</h2>
-          <p class="muted">Selected work demonstrating compiler engineering, simulation stability, and server-authoritative AI.</p>
+          <p class="muted">Selected work demonstrating compiler engineering, simulation stability, server-authoritative AI, and practical data architecture.</p>
         </div>
       </div>
 
@@ -189,13 +189,36 @@
             <li><b>Architecture:</b> Fully server-authoritative AI. The server owns movement, perception, target selection, pathing, and damage.</li>
             <li><b>Modular systems:</b> Vision, hearing, navigation, combat, and stimulus processing run inside a controlled update loop with throttled decisions to avoid jitter.</li>
             <li><b>Vision:</b> True line-of-sight with field-of-view checks and raycasts, with immediate loss and fast reacquire when visibility changes.</li>
-            <li><b>Hearing:</b> Directional, probabilistic noise events (distance and type weighted) with intentional position offsets, so the NPC investigates an area instead of locking onto exact coordinates.</li>
-            <li><b>Movement and combat:</b> PathfindingService with tuned agent parameters, repath intervals, stuck recovery, intentional stop distance, plus server-run close-range attacks with cooldowns and a touch-kill safeguard.</li>
-            <li><b>Anti-exploit:</b> Server validates all targeting and damage, collision groups prevent player blocking, and unstable humanoid states are disabled for consistent physics.</li>
+            <li><b>Hearing:</b> Directional, probabilistic noise events (distance and type weighted) with intentional position offsets for realistic investigation behaviour.</li>
+            <li><b>Movement and combat:</b> PathfindingService tuning, repath intervals, stuck recovery, intentional stop distance, close-range attacks with cooldowns, plus a touch-kill safeguard.</li>
+            <li><b>Anti-exploit:</b> Server validates targeting and damage, collision groups prevent player blocking, unstable humanoid states disabled for consistent physics.</li>
           </ul>
 
           <div class="projectActions">
             <a class="btn" href="#demos">Watch showcase</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="projectTop">
+            <div>
+              <h3>SQLite Document Store + FTS + Async Ingestion (Python)</h3>
+              <p class="muted tight">Portable persistence layer with explicit SQL and predictable concurrency.</p>
+            </div>
+            <span class="badge">Database</span>
+          </div>
+
+          <ul class="cleanList">
+            <li><b>Scope:</b> SQLite persistence layer for document storage, tagging, async ingestion, and full-text search.</li>
+            <li><b>Deduplication:</b> Content hashing prevents duplicate ingests, with clear created and updated timestamps for lifecycle tracking.</li>
+            <li><b>Search:</b> SQLite FTS5 with trigger-based syncing enables ranked results and contextual snippets without external services.</li>
+            <li><b>Ingestion:</b> Database-backed job queue with explicit state transitions (queued, running, done, failed) for reliability and replayability.</li>
+            <li><b>Concurrency:</b> WAL mode plus careful locking keeps multi-threaded access predictable under concurrent API requests and background work.</li>
+            <li><b>Design choice:</b> Avoids ORM abstraction in favor of explicit SQL for auditability and maintainability.</li>
+          </ul>
+
+          <div class="projectActions">
+            <a class="btn" href="#demos">Watch database demo</a>
           </div>
         </article>
 
@@ -297,14 +320,23 @@
 
         <article class="panel">
           <div class="panelTop">
-            <h3>SLOT</h3>
-            <span class="panelTag">Reserved</span>
+            <h3>SQLite database system showcase</h3>
+            <span class="panelTag">YouTube</span>
           </div>
 
-          <ul class="cleanList">
-            <li>THIS SPOT IS RESERVED FOR ANOTHER VIDEO</li>
-            <li></li>
-          </ul>
+          <div class="videoWrap" aria-label="SQLite database system video">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/eK3_DYA2sNY"
+              title="SQLite database system showcase"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <p class="muted note">
+            <a class="link" href="https://youtu.be/eK3_DYA2sNY" target="_blank" rel="noreferrer">Open on YouTube</a>
+          </p>
         </article>
       </div>
     </section>
@@ -317,17 +349,16 @@
         </div>
       </div>
 
-    <div class="noticeBox">
-  <ul class="cleanList">
-    <li>Short-term coding only with clearly defined scope.</li>
-    <li>Fully commented code delivered with each project.</li>
-    <li>Fourteen days of free bug support after delivery.</li>
-    <li>Payment terms: 10% upfront, 90% after completion.</li>
-  </ul>
-</div>
+      <div class="noticeBox">
+        <ul class="cleanList">
+          <li>Short-term coding only with clearly defined scope.</li>
+          <li>Fully commented code delivered with each project.</li>
+          <li>Fourteen days of free bug support after delivery.</li>
+          <li>Payment terms: 10% upfront, 90% after completion.</li>
+        </ul>
+      </div>
 
-
-      <div class="grid2">
+      <div class="grid3">
         <article class="panel">
           <div class="panelTop">
             <h3>Python services</h3>
@@ -339,37 +370,209 @@
               <tr>
                 <th>Service</th>
                 <th>Description</th>
-                <th>Price range</th>
+                <th>Price Range (R$)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Basic webhooks</td>
                 <td>Game to Discord logs, purchase alerts, exploit notifications</td>
-                <td>1,500 to 2,500 R$</td>
+                <td>1,500 to 2,500</td>
               </tr>
               <tr>
                 <td>Discord bots</td>
                 <td>Verification systems, group ranking, custom command suites</td>
-                <td>4,000 to 7,500 R$</td>
+                <td>4,000 to 7,500</td>
               </tr>
               <tr>
                 <td>Web scraping</td>
                 <td>Market trackers, limited monitoring, data harvesting tools</td>
-                <td>5,000 to 9,000 R$</td>
+                <td>5,000 to 9,000</td>
               </tr>
               <tr>
                 <td>Custom APIs</td>
                 <td>FastAPI or Flask backends for cross-game data and leaderboards</td>
-                <td>8,000 to 10,000 R$</td>
+                <td>8,000 to 10,000</td>
               </tr>
               <tr>
                 <td>Utility tools</td>
                 <td>Automated asset processors or bulk management scripts</td>
-                <td>3,000 to 5,500 R$</td>
+                <td>3,000 to 5,500</td>
               </tr>
             </tbody>
           </table>
+        </article>
+
+        <article class="panel">
+          <div class="panelTop">
+            <h3>High-level Python</h3>
+            <span class="panelTag">Advanced systems</span>
+          </div>
+
+          <table class="serviceTable">
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Description</th>
+                <th>Price Range (R$)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Custom transpilers</td>
+                <td>Full-stack language design (Lexer to Parser to AST to Output). Python tools that transform custom syntax into optimized C++, Luau, or JSON data structures.</td>
+                <td>45,000 to 120,000+</td>
+              </tr>
+              <tr>
+                <td>Data and asset pipelines</td>
+                <td>Custom CLI tools for bulk processing. Automated sprite-sheet generation, 3D model data extraction, map-to-code conversions.</td>
+                <td>20,000 to 45,000</td>
+              </tr>
+              <tr>
+                <td>External API architecture</td>
+                <td>High concurrency backends (FastAPI or Flask) for cross-server data syncing, global leaderboards, persistent world-state management.</td>
+                <td>25,000 to 60,000</td>
+              </tr>
+              <tr>
+                <td>Automated build systems</td>
+                <td>CI and version control verification scripts plus obfuscation layers to protect proprietary logic before publishing.</td>
+                <td>15,000 to 35,000</td>
+              </tr>
+              <tr>
+                <td>Web intel and scraping</td>
+                <td>Market trackers, catalog monitors, automated sentiment analysis tools for economy management and competitor tracking.</td>
+                <td>10,000 to 30,000</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="subHead">
+            <h4>Database architecture and persistence</h4>
+            <p class="muted tight">SQLite, relational, NoSQL, and hybrid storage systems priced for production-grade reliability.</p>
+          </div>
+
+          <div class="priceGroup">
+            <h5 class="groupTitle">SQLite and embedded databases</h5>
+            <p class="muted tight">Best suited for small to medium projects, single-server systems, tools, and game backends.</p>
+
+            <table class="serviceTable">
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>Description</th>
+                  <th>Price Range (R$)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Basic SQLite setup</td>
+                  <td>Schema design, tables, indexes, basic queries</td>
+                  <td>8,000 to 15,000</td>
+                </tr>
+                <tr>
+                  <td>SQLite with full-text search (FTS)</td>
+                  <td>Optimized search, triggers, indexing, ranking, snippets</td>
+                  <td>15,000 to 30,000</td>
+                </tr>
+                <tr>
+                  <td>SQLite with async jobs and data pipelines</td>
+                  <td>Background ingestion, job tracking, deduplication, tagging</td>
+                  <td>25,000 to 45,000</td>
+                </tr>
+                <tr>
+                  <td>Advanced SQLite architecture</td>
+                  <td>WAL mode, concurrency handling, integrity constraints, performance tuning</td>
+                  <td>35,000 to 60,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="priceGroup">
+            <h5 class="groupTitle">Relational databases (PostgreSQL and MySQL)</h5>
+            <p class="muted tight">For scalable systems, multi-user environments, and production backends.</p>
+
+            <table class="serviceTable">
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>Description</th>
+                  <th>Price Range (R$)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Relational database setup</td>
+                  <td>Schema modeling, relations, migrations</td>
+                  <td>20,000 to 40,000</td>
+                </tr>
+                <tr>
+                  <td>Optimized relational system</td>
+                  <td>Indexing strategy, query optimization, joins, constraints</td>
+                  <td>40,000 to 75,000</td>
+                </tr>
+                <tr>
+                  <td>Production-ready database architecture</td>
+                  <td>Transactions, locking strategy, performance tuning, data integrity guarantees</td>
+                  <td>70,000 to 120,000+</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="priceGroup">
+            <h5 class="groupTitle">NoSQL and document databases (MongoDB-style)</h5>
+            <p class="muted tight">For flexible schemas, fast iteration, and content-heavy systems.</p>
+
+            <table class="serviceTable">
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>Description</th>
+                  <th>Price Range (R$)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Basic NoSQL setup</td>
+                  <td>Collections, document modeling, queries</td>
+                  <td>18,000 to 35,000</td>
+                </tr>
+                <tr>
+                  <td>Optimized NoSQL system</td>
+                  <td>Indexing, aggregation pipelines, performance tuning</td>
+                  <td>35,000 to 70,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="priceGroup">
+            <h5 class="groupTitle">Custom and hybrid database systems</h5>
+            <p class="muted tight">Used when off-the-shelf solutions are insufficient.</p>
+
+            <table class="serviceTable">
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>Description</th>
+                  <th>Price Range (R$)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Hybrid SQL plus search systems</td>
+                  <td>Relational storage combined with custom indexing and search logic</td>
+                  <td>60,000 to 120,000+</td>
+                </tr>
+                <tr>
+                  <td>Custom storage logic and engine-like systems</td>
+                  <td>Content hashing, deduplication, job queues, domain-specific schemas</td>
+                  <td>90,000 to 180,000+</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </article>
 
         <article class="panel">
@@ -383,34 +586,34 @@
               <tr>
                 <th>Service</th>
                 <th>Description</th>
-                <th>Price range</th>
+                <th>Price Range (R$)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Logic and optimization</td>
                 <td>Bug fixing, script refactoring, lag reduction tasks</td>
-                <td>1,000 to 2,500 R$</td>
+                <td>1,000 to 2,500</td>
               </tr>
               <tr>
                 <td>Data architecture</td>
                 <td>ProfileService or DataStore2 setup with trade locking</td>
-                <td>3,500 to 6,000 R$</td>
+                <td>3,500 to 6,000</td>
               </tr>
               <tr>
                 <td>Gameplay modules</td>
                 <td>Combat hitboxes, weapon systems, round controllers</td>
-                <td>5,000 to 8,500 R$</td>
+                <td>5,000 to 8,500</td>
               </tr>
               <tr>
                 <td>UI scripting</td>
                 <td>Functional shops, inventory systems, smooth tweens</td>
-                <td>4,000 to 7,000 R$</td>
+                <td>4,000 to 7,000</td>
               </tr>
               <tr>
                 <td>Complex systems</td>
                 <td>Placement systems or custom physics</td>
-                <td>7,500 to 10,000 R$</td>
+                <td>7,500 to 10,000</td>
               </tr>
             </tbody>
           </table>
