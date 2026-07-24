@@ -3,23 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0b1f33" />
-  <meta name="description" content="CollectorXVIII builds production-ready Roblox vehicle systems, persistent data architecture, progression, economy, AI, and physics systems." />
+  <meta name="theme-color" content="#071524" />
+  <meta name="description" content="CollectorXVIII builds production-grade Roblox vehicle systems, persistent data architecture, progression, economy, AI, and physics systems." />
   <title>CollectorXVIII | Roblox Systems Engineer</title>
-  <link rel="stylesheet" href="./styles.css?v=2.0" />
+  <link rel="stylesheet" href="styles.css?v=4.0" />
   <style>
-    /* Critical fallback: the page remains readable if the external stylesheet is unavailable. */
-    html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;color:#142033;background:#f5f7fa}main,section,header,footer{display:block}img,video{max-width:100%}.site-shell{width:min(1180px,calc(100% - 40px));margin:auto}.site-header{background:#0b1f33;color:#fff}.header-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand,.nav a,.header-cta,.button{text-decoration:none}.brand{color:#fff;font-weight:800}.nav{display:flex;gap:20px}.nav a{color:#dbe5ef}.hero{background:#0b1f33;color:#fff;padding:88px 0}.hero-grid,.flagship-grid,.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px}.section{padding:88px 0}.card{background:#fff;border:1px solid #d9e0e8;padding:28px}.button{display:inline-block;padding:13px 18px;border-radius:6px;background:#2f6bff;color:#fff;font-weight:700}@media(max-width:800px){.nav,.header-cta{display:none}.hero-grid,.flagship-grid,.contact-grid{grid-template-columns:1fr}.site-shell{width:min(100% - 28px,1180px)}}
+    /* Critical fallback keeps the page usable if the external stylesheet is not uploaded. */
+    body{margin:0;background:#071524;color:#fff;font-family:Arial,sans-serif}.site-shell{width:min(1180px,calc(100% - 40px));margin:auto}.site-header{border-bottom:1px solid #26394d}.header-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between}.nav{display:flex;gap:20px}.nav a,.brand,.button{text-decoration:none;color:inherit}.hero{padding:90px 0}.hero-grid,.flagship-grid,.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}.section{padding:88px 0}.button{display:inline-flex;padding:13px 18px;background:#2f6bff;border-radius:7px}@media(max-width:800px){.nav{display:none}.hero-grid,.flagship-grid,.contact-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
   <header class="site-header" id="top">
     <div class="site-shell header-inner">
       <a class="brand" href="#top" aria-label="CollectorXVIII home">
-        <span class="brand-monogram" aria-hidden="true">CX</span>
-        <span>CollectorXVIII</span>
+        <span class="brand-mark" aria-hidden="true">XVIII</span>
+        <span class="brand-copy"><strong>CollectorXVIII</strong><small>Roblox Systems Engineer</small></span>
       </a>
 
       <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation">
@@ -28,13 +29,13 @@
 
       <nav class="nav" id="primaryNav" aria-label="Primary navigation">
         <a href="#flagship">Flagship</a>
-        <a href="#capabilities">Capabilities</a>
-        <a href="#work">Selected work</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#projects">Projects</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
       </nav>
 
-      <a class="header-cta" href="#contact">Request a quote</a>
+      <a class="header-cta" href="#contact">Start a project</a>
     </div>
   </header>
 
@@ -42,305 +43,272 @@
     <section class="hero">
       <div class="site-shell hero-grid">
         <div class="hero-copy">
-          <p class="overline">Roblox systems engineering</p>
-          <h1>Production-ready systems for serious Roblox projects.</h1>
-          <p class="hero-lead">
-            I design and implement vehicle mechanics, persistent player data, progression, economy, AI, and physics systems with clear ownership boundaries, maintainable architecture, and documented delivery.
-          </p>
+          <p class="eyebrow">Roblox systems engineering</p>
+          <h1>I build scalable systems that power serious Roblox games.</h1>
+          <p class="hero-lead">Vehicle simulation, persistent data architecture, progression systems, and server-authoritative gameplay engineered for performance, security, and maintainability.</p>
+
           <div class="hero-actions">
-            <a class="button button-primary" href="#flagship">View flagship project</a>
-            <a class="button button-ghost" href="#contact">Discuss a commission</a>
+            <a class="button button-primary" href="#flagship">View Velocity District <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="#contact">Start a project</a>
           </div>
-          <div class="hero-proof" aria-label="Core capability summary">
-            <div><strong>5+ years</strong><span>Roblox development</span></div>
-            <div><strong>Server-authoritative</strong><span>Gameplay architecture</span></div>
-            <div><strong>Documented</strong><span>Source and handoff</span></div>
-          </div>
+
+          <ul class="hero-tags" aria-label="Primary specialisations">
+            <li>Vehicle engineering</li>
+            <li>Persistent profiles</li>
+            <li>Progression and economy</li>
+            <li>Server validation</li>
+          </ul>
         </div>
 
-        <aside class="executive-panel" aria-label="Engineering profile">
-          <div class="panel-heading">
-            <span>Engineering profile</span>
-            <span class="availability"><i></i> Available</span>
+        <div class="hero-visual" aria-label="Velocity District gameplay preview">
+          <img src="assets/velocity-demo.jpg" alt="Velocity District vehicle and contract interface in Roblox" />
+          <span class="hero-visual-shade" aria-hidden="true"></span>
+          <div class="hero-visual-caption">
+            <span>Flagship system demo</span>
+            <strong>Vehicle loop, contracts, rewards, and progression</strong>
           </div>
-          <dl class="profile-list">
-            <div><dt>Primary discipline</dt><dd>Roblox gameplay systems</dd></div>
-            <div><dt>Specialisation</dt><dd>Vehicles, data, progression</dd></div>
-            <div><dt>Secondary skills</dt><dd>Python, AI, simulation</dd></div>
-            <div><dt>Engagement model</dt><dd>Milestone-based projects</dd></div>
-          </dl>
-          <div class="panel-note">
-            Suitable for scoped builds, subsystem ownership, technical repair, and architecture-heavy commissions.
-          </div>
-        </aside>
+        </div>
       </div>
     </section>
 
-    <section class="trust-strip" aria-label="Technical focus areas">
-      <div class="site-shell trust-grid">
-        <span>Vehicle engineering</span>
-        <span>Persistent profiles</span>
-        <span>Progression and economy</span>
-        <span>Server validation</span>
-        <span>Performance and optimisation</span>
+    <section class="credibility" aria-label="Professional credibility">
+      <div class="site-shell credibility-grid">
+        <div><strong>5+ years</strong><span>Roblox development</span></div>
+        <div><strong>Server-authoritative</strong><span>Architecture and validation</span></div>
+        <div><strong>Vehicle and physics</strong><span>Systems engineering</span></div>
+        <div><strong>Persistent data</strong><span>Complex player profiles</span></div>
+        <div><strong>Documented delivery</strong><span>Source, tests, and handoff</span></div>
       </div>
     </section>
 
     <section class="section flagship" id="flagship">
       <div class="site-shell">
-        <div class="section-heading heading-split">
-          <div>
-            <p class="overline overline-dark">Flagship project</p>
-            <h2>Velocity District</h2>
-          </div>
-          <p>
-            A compact vehicle-progression vertical slice built to demonstrate integrated gameplay systems rather than map scale.
-          </p>
-        </div>
-
         <div class="flagship-grid">
-          <div class="media-card">
-            <div class="video-shell">
-              <a
-                class="video-link"
-                href="https://youtu.be/650DPgPvWqc"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Watch the Velocity District systems demonstration on YouTube"
-              >
-                <img
-                  src="./assets/velocity-district-poster.jpg"
-                  alt="Velocity District vehicle systems demonstration"
-                  loading="lazy"
-                />
-                <span class="video-link-shade" aria-hidden="true"></span>
-                <span class="video-link-content">
-                  <span class="play-mark" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="img">
-                      <path d="M8.5 6.4v11.2L17.2 12 8.5 6.4Z"></path>
-                    </svg>
-                  </span>
-                  <span>
-                    <strong>Watch project demonstration</strong>
-                    <small>Opens on YouTube</small>
-                  </span>
-                </span>
-              </a>
+          <div class="flagship-copy">
+            <p class="eyebrow">Flagship project</p>
+            <div class="title-row">
+              <h2>Velocity District</h2>
+              <span class="status-chip">Vertical slice</span>
             </div>
-            <div class="media-meta">
-              <div>
-                <strong>Playable systems demonstration</strong>
-                <span>Vehicle loop, contracts, rewards, and persistent progression</span>
-              </div>
-              <a href="https://youtu.be/650DPgPvWqc" target="_blank" rel="noreferrer">Watch on YouTube</a>
-            </div>
+            <p class="flagship-lead">A compact vehicle-progression experience built to prove integrated gameplay systems rather than map scale.</p>
+
+            <ul class="check-list">
+              <li>Complete contract loop with cash and XP rewards</li>
+              <li>Vehicle spawning, ownership checks, and telemetry</li>
+              <li>Persistent progression and upgrade-ready data</li>
+              <li>Server-owned mission validation and reward granting</li>
+            </ul>
+
+            <a class="button button-primary button-youtube" href="https://youtu.be/650DPgPvWqc" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 7.1a2.7 2.7 0 0 0-1.9-1.9C16.9 4.7 12 4.7 12 4.7s-4.9 0-6.6.5a2.7 2.7 0 0 0-1.9 1.9A28 28 0 0 0 3 12a28 28 0 0 0 .5 4.9 2.7 2.7 0 0 0 1.9 1.9c1.7.5 6.6.5 6.6.5s4.9 0 6.6-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 21 12a28 28 0 0 0-.5-4.9ZM10.2 15.4V8.6L16 12l-5.8 3.4Z"/></svg>
+              Watch project demo on YouTube
+              <span aria-hidden="true">↗</span>
+            </a>
           </div>
 
-          <div class="project-summary">
-            <p class="summary-intro">
-              The project is structured around three capabilities commercial Roblox teams repeatedly need: reliable vehicle behaviour, complicated evolving player data, and progression that connects gameplay to a usable economy.
-            </p>
-
-            <div class="project-pillar">
-              <span>01</span>
-              <div>
-                <h3>Vehicle systems</h3>
-                <p>Config-driven handling, spawning, ownership validation, cross-platform controls, runtime telemetry, and upgrade-ready performance values.</p>
-              </div>
-            </div>
-            <div class="project-pillar">
-              <span>02</span>
-              <div>
-                <h3>Complex persistent data</h3>
-                <p>Nested vehicle records, wallets, progression state, contract history, controlled mutations, reconciliation, and failure-aware saving.</p>
-              </div>
-            </div>
-            <div class="project-pillar">
-              <span>03</span>
-              <div>
-                <h3>Progression and economy</h3>
-                <p>Contracts, cash, XP, unlock conditions, rewards, purchasable upgrades, and persistent state across sessions.</p>
-              </div>
-            </div>
-
-            <p class="technical-review-note">Detailed scripts, system diagrams, and implementation notes are available for technical review.</p>
-          </div>
+          <a class="youtube-card" href="https://youtu.be/650DPgPvWqc" target="_blank" rel="noreferrer" aria-label="Watch Velocity District on YouTube">
+            <img src="assets/velocity-hero.jpg" alt="Velocity District contract and vehicle gameplay" />
+            <span class="youtube-shade" aria-hidden="true"></span>
+            <span class="youtube-play" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9 7.2v9.6l8-4.8-8-4.8Z"/></svg>
+            </span>
+            <span class="youtube-caption"><strong>Gameplay systems showcase</strong><small>Opens on YouTube</small></span>
+          </a>
         </div>
 
-        <div class="architecture-panel">
-          <div class="architecture-copy">
-            <p class="overline overline-dark">Architecture</p>
-            <h3>Responsive clients. Server-owned outcomes.</h3>
-            <p>Inputs and presentation remain responsive while ownership, rewards, progression, and persistent mutations are validated on the server.</p>
-          </div>
-          <ol class="architecture-flow">
-            <li><span>01</span><strong>Player input</strong><small>Keyboard, touch, controller</small></li>
-            <li><span>02</span><strong>Vehicle runtime</strong><small>Handling and local feedback</small></li>
-            <li><span>03</span><strong>Server validation</strong><small>Ownership and mission state</small></li>
-            <li><span>04</span><strong>Profile transaction</strong><small>Cash, XP, vehicles, upgrades</small></li>
-          </ol>
+        <div class="pillar-grid">
+          <article class="pillar-card">
+            <span class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 15h14l-1.5-5h-11L5 15Zm1 0v3m12-3v3M7.5 10 9 7h6l1.5 3M4 15h16v3H4v-3Z"/></svg>
+            </span>
+            <div><h3>Vehicle systems</h3><p>Config-driven handling, spawning, ownership validation, cross-platform controls, telemetry, and upgrade-ready performance values.</p></div>
+          </article>
+          <article class="pillar-card">
+            <span class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 6c0-1.1 3.6-2 8-2s8 .9 8 2-3.6 2-8 2-8-.9-8-2Zm0 0v6c0 1.1 3.6 2 8 2s8-.9 8-2V6M4 12v6c0 1.1 3.6 2 8 2s8-.9 8-2v-6"/></svg>
+            </span>
+            <div><h3>Persistent data architecture</h3><p>Nested vehicle records, wallets, progression state, contract history, controlled mutations, reconciliation, and failure-aware saving.</p></div>
+          </article>
+          <article class="pillar-card">
+            <span class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m4 18 5-6 4 3 7-9M16 6h4v4"/></svg>
+            </span>
+            <div><h3>Progression and economy</h3><p>Contracts, cash, XP, unlock conditions, rewards, purchasable upgrades, and persistent state across sessions.</p></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section capabilities" id="capabilities">
+    <section class="section architecture" id="architecture">
       <div class="site-shell">
         <div class="section-heading">
-          <p class="overline overline-dark">Core capabilities</p>
-          <h2>Systems I can own from architecture through delivery.</h2>
-          <p>Focused engineering for Roblox projects that need more than isolated scripts.</p>
+          <p class="eyebrow eyebrow-blue">Engineered for reliability and scale</p>
+          <h2>Technical proof, not just feature claims.</h2>
+          <p>These simplified views show the trust boundaries, data lifecycle, and progression flow behind the portfolio project.</p>
         </div>
 
-        <div class="capability-grid">
-          <article class="capability-card card">
-            <div class="card-index">01</div>
-            <h3>Vehicle engineering</h3>
-            <p>Driving systems with deliberate handling, clear configuration, and production integration.</p>
-            <ul>
-              <li>Custom chassis and vehicle definitions</li>
-              <li>Acceleration, braking, steering, traction, and suspension</li>
-              <li>Garage ownership, spawning, recovery, and upgrades</li>
-              <li>Network ownership and server-side sanity checks</li>
-              <li>Keyboard, mobile, and gamepad controls</li>
-            </ul>
+        <div class="proof-grid">
+          <article class="proof-card">
+            <div class="proof-heading"><span>01</span><h3>Client / server architecture</h3></div>
+            <div class="diagram client-server-diagram" aria-label="Client and server architecture diagram">
+              <div class="diagram-node node-blue"><strong>Client</strong><small>Input</small><small>UI feedback</small><small>Prediction</small></div>
+              <div class="diagram-link"><span>Remote events</span><i>⇄</i><small>State updates</small></div>
+              <div class="diagram-node node-green"><strong>Server</strong><small>Authority</small><small>Validation</small><small>Rewards</small></div>
+              <div class="diagram-store">DataStoreService<br><small>Persistent player state</small></div>
+            </div>
+            <p>Responsive input remains client-side while ownership, missions, rewards, and profile mutations remain server-owned.</p>
           </article>
 
-          <article class="capability-card card">
-            <div class="card-index">02</div>
-            <h3>Persistent data architecture</h3>
-            <p>Profile systems designed for complicated player state and long-term schema changes.</p>
-            <ul>
-              <li>Nested profiles and controlled mutation APIs</li>
-              <li>Session locking, autosave, retry, and shutdown handling</li>
-              <li>Schema versioning, migrations, and reconciliation</li>
-              <li>Transaction ledgers and duplicate reward protection</li>
-              <li>Inventories, vehicles, currencies, settings, and history</li>
-            </ul>
+          <article class="proof-card">
+            <div class="proof-heading"><span>02</span><h3>Player data lifecycle</h3></div>
+            <div class="lifecycle" aria-label="Player data lifecycle diagram">
+              <div><b>Load</b><small>Acquire lock</small></div><i>→</i>
+              <div><b>Play</b><small>Active session</small></div><i>→</i>
+              <div><b>Save</b><small>Autosave</small></div><i>→</i>
+              <div><b>Release</b><small>Close lock</small></div>
+              <span class="recovery">Failure recovery and retry</span>
+            </div>
+            <p>Session ownership, autosaves, reconciliation, and shutdown release protect complicated profile state.</p>
           </article>
 
-          <article class="capability-card card">
-            <div class="card-index">03</div>
-            <h3>Progression and commercial systems</h3>
-            <p>Connected progression, economy, and player-facing systems built around a measurable core loop.</p>
-            <ul>
-              <li>XP, levels, reputation, unlocks, and skill paths</li>
-              <li>Contracts, quests, achievements, and daily systems</li>
-              <li>Shops, upgrades, currencies, rewards, and sinks</li>
-              <li>Purchase validation and receipt-safe granting</li>
-              <li>Responsive UI integration and gameplay feedback</li>
-            </ul>
+          <article class="proof-card">
+            <div class="proof-heading"><span>03</span><h3>Progression flow</h3></div>
+            <div class="progression-flow" aria-label="Progression flow diagram">
+              <div>Contracts</div><i>→</i><div>Cash + XP</div><i>→</i><div>Upgrades</div><i>→</i><div>Stronger vehicles</div>
+              <span>Repeatable core loop</span>
+            </div>
+            <p>Gameplay rewards connect directly to upgrades and unlocks instead of existing as disconnected UI counters.</p>
+          </article>
+
+          <article class="proof-card studio-card">
+            <div class="proof-heading"><span>04</span><h3>Studio evidence</h3></div>
+            <div class="studio-collage">
+              <img src="assets/velocity-hero.jpg" alt="Velocity District mission pickup interface" />
+              <img src="assets/velocity-demo.jpg" alt="Velocity District vehicle driving telemetry" />
+              <img src="assets/velocity-progress.jpg" alt="Velocity District reward and progression interface" />
+            </div>
+            <p>Built and tested in Roblox Studio with a representative gameplay loop and visible runtime state.</p>
           </article>
         </div>
 
-        <div class="secondary-capabilities">
-          <div><span>AI and NPC systems</span><p>Server-authoritative perception, navigation, combat, and behaviour architecture.</p></div>
-          <div><span>Physics and simulation</span><p>Custom forces, vector systems, numerical stability, and real-time optimisation.</p></div>
-          <div><span>Python and tooling</span><p>Automation, data pipelines, back-end services, compilers, and development utilities.</p></div>
+        <div class="code-proof">
+          <div class="code-heading"><span>Example: server-side mission validation</span><small>Luau</small></div>
+          <pre><code><span class="code-keyword">function</span> MissionService:<span class="code-fn">CompleteContract</span>(player, contractId, payload)
+    <span class="code-keyword">local</span> contract = self.ActiveContracts[player]
+    <span class="code-keyword">if not</span> contract <span class="code-keyword">or</span> contract.Id ~= contractId <span class="code-keyword">then return false end</span>
+    <span class="code-keyword">if not</span> VehicleService:<span class="code-fn">CanUseVehicle</span>(player, payload.vehicleId) <span class="code-keyword">then return false end</span>
+    <span class="code-keyword">if not</span> self:<span class="code-fn">IsValidDropoff</span>(contract, payload.position) <span class="code-keyword">then return false end</span>
+    <span class="code-keyword">return</span> ProfileService:<span class="code-fn">Transaction</span>(player, <span class="code-string">"ContractReward"</span>, <span class="code-keyword">function</span>(profile)
+        profile.Wallet.Cash += contract.Reward.Cash
+        profile.Progression.XP += contract.Reward.XP
+    <span class="code-keyword">end</span>)
+<span class="code-keyword">end</span></code></pre>
+          <div class="code-notes">
+            <span>Active contract required</span>
+            <span>Vehicle ownership validated</span>
+            <span>Destination checked server-side</span>
+            <span>Reward granted transactionally</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section selected-work" id="work">
+    <section class="section projects" id="projects">
       <div class="site-shell">
         <div class="section-heading heading-split">
-          <div>
-            <p class="overline overline-dark">Selected technical work</p>
-            <h2>Additional engineering depth.</h2>
-          </div>
-          <p>These projects support the main Roblox offer by demonstrating systems thinking beyond conventional gameplay scripting.</p>
+          <div><p class="eyebrow eyebrow-blue">Additional engineering work</p><h2>Depth beyond conventional gameplay scripting.</h2></div>
+          <p>Compiler design, simulation, server-authoritative AI, and data infrastructure support the main Roblox systems offer.</p>
         </div>
 
-        <div class="work-list">
-          <article class="work-row">
-            <div class="work-type"><span>Roblox / Luau</span><small>AI systems</small></div>
-            <div><h3>Server-authoritative NPC AI</h3><p>Perception, hearing, target selection, pathfinding, combat validation, collision handling, and controlled update scheduling.</p></div>
-            <a href="https://youtu.be/9Arf3RqUI-w" target="_blank" rel="noreferrer">View demo</a>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-media project-media-kidlang">
+              <img src="https://img.youtube.com/vi/LdH57x1eT08/hqdefault.jpg" alt="KidLang compiler demonstration" loading="lazy" onerror="this.remove()" />
+              <span class="project-fallback">KL</span>
+            </div>
+            <div class="project-body"><span class="project-type">Compiler engineering</span><h3>KidLang Compiler and IDE</h3><p>Custom language with lexer, parser, AST, semantic transformation, and optimised C++17 output.</p><a href="https://youtu.be/LdH57x1eT08" target="_blank" rel="noreferrer">View demo <span>↗</span></a></div>
           </article>
-          <article class="work-row">
-            <div class="work-type"><span>Roblox / Luau</span><small>Simulation</small></div>
-            <div><h3>Black Hole Physics Sandbox</h3><p>Vector acceleration, adaptive timesteps, orbital behaviour, debris management, and stability tuning for real-time simulation.</p></div>
-            <a href="https://youtu.be/2vVi5yfS_fo" target="_blank" rel="noreferrer">View demo</a>
+
+          <article class="project-card">
+            <div class="project-media project-media-physics">
+              <img src="https://img.youtube.com/vi/2vVi5yfS_fo/hqdefault.jpg" alt="Black Hole Physics Sandbox demonstration" loading="lazy" onerror="this.remove()" />
+              <span class="project-fallback">BH</span>
+            </div>
+            <div class="project-body"><span class="project-type">Physics simulation</span><h3>Black Hole Physics Sandbox</h3><p>Real-time orbital mechanics using vector acceleration, adaptive timesteps, and stability tuning.</p><a href="https://youtu.be/2vVi5yfS_fo" target="_blank" rel="noreferrer">View demo <span>↗</span></a></div>
           </article>
-          <article class="work-row">
-            <div class="work-type"><span>Python / C++</span><small>Compiler</small></div>
-            <div><h3>KidLang language and transpiler</h3><p>Lexer, recursive-descent parser, AST model, semantic transformation, and C++17 output generation.</p></div>
-            <a href="https://youtu.be/LdH57x1eT08" target="_blank" rel="noreferrer">View demo</a>
+
+          <article class="project-card">
+            <div class="project-media project-media-ai">
+              <img src="https://img.youtube.com/vi/9Arf3RqUI-w/hqdefault.jpg" alt="Server-authoritative NPC AI demonstration" loading="lazy" onerror="this.remove()" />
+              <span class="project-fallback">AI</span>
+            </div>
+            <div class="project-body"><span class="project-type">Gameplay AI</span><h3>Server-Authoritative NPC AI</h3><p>Perception, hearing, target selection, pathfinding, combat validation, and controlled update scheduling.</p><a href="https://youtu.be/9Arf3RqUI-w" target="_blank" rel="noreferrer">View demo <span>↗</span></a></div>
           </article>
-          <article class="work-row">
-            <div class="work-type"><span>Python / SQLite</span><small>Data systems</small></div>
-            <div><h3>Document store and asynchronous ingestion</h3><p>Content hashing, deduplication, FTS5 search, durable job queues, WAL concurrency, and explicit SQL.</p></div>
-            <a href="https://youtu.be/eK3_DYA2sNY" target="_blank" rel="noreferrer">View demo</a>
+
+          <article class="project-card">
+            <div class="project-media project-media-data">
+              <img src="https://img.youtube.com/vi/eK3_DYA2sNY/hqdefault.jpg" alt="SQLite document store demonstration" loading="lazy" onerror="this.remove()" />
+              <span class="project-fallback">DB</span>
+            </div>
+            <div class="project-body"><span class="project-type">Data infrastructure</span><h3>SQLite Document Store</h3><p>Content hashing, deduplication, FTS5 search, durable job queues, WAL concurrency, and explicit SQL.</p><a href="https://youtu.be/eK3_DYA2sNY" target="_blank" rel="noreferrer">View demo <span>↗</span></a></div>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="tech-strip" aria-label="Technology stack">
+      <div class="site-shell tech-grid">
+        <span>Luau</span><span>Python</span><span>C++17</span><span>Roblox Studio</span><span>Git and GitHub</span><span>SQLite</span><span>DataStoreService</span><span>MemoryStoreService</span>
       </div>
     </section>
 
     <section class="section services" id="services">
       <div class="site-shell services-layout">
         <div class="section-heading services-heading">
-          <p class="overline">Commission structure</p>
-          <h2>Scoped engineering engagements.</h2>
-          <p>Projects are quoted against a defined technical outcome, delivery schedule, integration risk, and support requirement.</p>
-          <div class="terms-grid">
-            <div><span>Delivery</span><strong>Milestone-based</strong></div>
-            <div><span>Support</span><strong>14-day bug-fix period</strong></div>
-            <div><span>Handoff</span><strong>Documented source code</strong></div>
-            <div><span>Payment</span><strong>30 / 40 / 30 milestones</strong></div>
-          </div>
+          <p class="eyebrow">Services</p>
+          <h2>Systems I can own from architecture through delivery.</h2>
+          <p>Work is scoped around a defined technical outcome, integration risk, deadline, and support requirement.</p>
         </div>
 
-        <div class="service-list">
-          <article><span>01</span><div><h3>Vehicle and gameplay systems</h3><p>Chassis, controls, ownership, upgrades, missions, combat, placement, and advanced mechanics.</p></div><strong>Quoted by scope</strong></article>
-          <article><span>02</span><div><h3>Data, economy, and monetisation infrastructure</h3><p>Profiles, inventories, currencies, purchases, migrations, ledgers, and failure handling.</p></div><strong>Quoted by scope</strong></article>
-          <article><span>03</span><div><h3>Progression and UI integration</h3><p>XP, levels, quests, unlocks, shops, garages, responsive interfaces, and feedback systems.</p></div><strong>Quoted by scope</strong></article>
-          <article><span>04</span><div><h3>Architecture, optimisation, and technical repair</h3><p>Refactors, networking reviews, exploit mitigation, performance work, Python tooling, and backend integration.</p></div><strong>Quoted by scope</strong></article>
+        <div class="service-grid">
+          <article><span>01</span><div><h3>Vehicle systems</h3><p>Custom chassis, controls, upgrades, spawning, garage ownership, telemetry, and networking.</p></div></article>
+          <article><span>02</span><div><h3>Persistent data</h3><p>Profiles, inventories, currencies, vehicle records, migrations, ledgers, and failure handling.</p></div></article>
+          <article><span>03</span><div><h3>Progression and economy</h3><p>Contracts, XP, levels, unlocks, shops, quests, rewards, and balance-ready configuration.</p></div></article>
+          <article><span>04</span><div><h3>AI and gameplay systems</h3><p>NPC behaviour, combat, pathfinding, round systems, placements, and custom mechanics.</p></div></article>
+          <article><span>05</span><div><h3>Architecture and optimisation</h3><p>Refactoring, server validation, exploit mitigation, performance review, and codebase repair.</p></div></article>
+          <article><span>06</span><div><h3>Python tooling</h3><p>Automation, data pipelines, back-end services, build tools, and developer utilities.</p></div></article>
         </div>
       </div>
     </section>
 
-    <section class="section contact" id="contact">
+    <section class="contact" id="contact">
       <div class="site-shell contact-grid">
         <div class="contact-copy">
-          <p class="overline overline-dark">Project enquiries</p>
-          <h2>Send the scope, constraints, and expected outcome.</h2>
-          <p>For an accurate estimate, include the current project state, required systems, delivery date, budget range, and relevant references.</p>
-
-          <div class="contact-methods">
-            <a href="mailto:collectordevelopment6@gmail.com"><span>Email</span><strong>collectordevelopment6@gmail.com</strong></a>
-            <button type="button" id="discordButton"><span>Discord</span><strong>collector668</strong><small>Click to copy</small></button>
-            <a href="https://www.roblox.com/users/2882137577/profile" target="_blank" rel="noreferrer"><span>Roblox</span><strong>View profile</strong></a>
+          <p class="eyebrow">Project enquiries</p>
+          <h2>Need a vehicle system, progression loop, or persistent data architecture built?</h2>
+          <p>Send the current project state, required systems, expected outcome, deadline, budget range, and relevant references.</p>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:collectordevelopment6@gmail.com?subject=Roblox%20systems%20project%20inquiry">Email me</a>
+            <button class="button button-secondary" type="button" id="discordButton">Copy Discord: collector668</button>
+            <a class="button button-secondary" href="https://www.roblox.com/users/2882137577/profile" target="_blank" rel="noreferrer">View Roblox profile</a>
           </div>
         </div>
 
-        <aside class="inquiry-card card">
-          <div class="inquiry-title"><span>Recommended enquiry format</span><small>Required for estimates</small></div>
-          <pre><code>Project type:
-Roblox Luau / Python / mixed
-
-Current state:
-New build, existing codebase, or repair
-
-Required outcome:
-What must work at delivery
-
-Systems involved:
-Vehicles, data, progression, UI, etc.
-
-Deadline and budget:
-Exact date and realistic range
-
-References:
-Place link, video, screenshots, or spec</code></pre>
-          <a class="button button-primary button-full" href="mailto:collectordevelopment6@gmail.com?subject=Project%20inquiry%20for%20CollectorXVIII">Open email enquiry</a>
-        </aside>
+        <div class="engagement-panel">
+          <div><span>Typical work</span><strong>Vehicle systems<br>Data architecture<br>Progression and economy</strong></div>
+          <div><span>Engagement</span><strong>Milestone-based<br>30% / 40% / 30%</strong></div>
+          <div><span>Support</span><strong>Documented source<br>14-day bug-fix period</strong></div>
+          <div><span>Response</span><strong>Usually within 24 hours</strong></div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="site-shell footer-inner">
-      <div><strong>CollectorXVIII</strong><p>Roblox systems engineering: vehicles, persistent data, progression, AI, physics, and technical infrastructure.</p></div>
-      <div><span>© <span id="year"></span></span><a href="#top">Back to top</a></div>
+      <a class="brand footer-brand" href="#top"><span class="brand-mark">XVIII</span><span class="brand-copy"><strong>CollectorXVIII</strong><small>Roblox Systems Engineer</small></span></a>
+      <p>© <span id="year"></span> CollectorXVIII. All rights reserved.</p>
+      <div class="footer-links"><a href="https://youtu.be/650DPgPvWqc" target="_blank" rel="noreferrer">YouTube</a><a href="mailto:collectordevelopment6@gmail.com">Email</a><a href="#top">Back to top</a></div>
     </div>
   </footer>
 
@@ -351,6 +319,7 @@ Place link, video, screenshots, or spec</code></pre>
     const nav = document.getElementById('primaryNav');
     const discordButton = document.getElementById('discordButton');
     const toast = document.getElementById('toast');
+    const progress = document.getElementById('scrollProgress');
     document.getElementById('year').textContent = new Date().getFullYear();
 
     menuButton.addEventListener('click', () => {
@@ -371,11 +340,10 @@ Place link, video, screenshots, or spec</code></pre>
       showToast.timer = setTimeout(() => toast.classList.remove('show'), 2200);
     }
 
-    async function copyDiscord() {
+    discordButton.addEventListener('click', async () => {
       const value = 'collector668';
-      try {
-        await navigator.clipboard.writeText(value);
-      } catch (error) {
+      try { await navigator.clipboard.writeText(value); }
+      catch (error) {
         const area = document.createElement('textarea');
         area.value = value;
         area.style.position = 'fixed';
@@ -386,9 +354,25 @@ Place link, video, screenshots, or spec</code></pre>
         area.remove();
       }
       showToast('Discord username copied');
-    }
+    });
 
-    discordButton.addEventListener('click', copyDiscord);
+    const navLinks = [...nav.querySelectorAll('a[href^="#"]')];
+    const sections = navLinks.map((link) => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+      });
+    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0.01 });
+    sections.forEach((section) => observer.observe(section));
+
+    function updateProgress() {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+      progress.style.width = `${pct}%`;
+    }
+    updateProgress();
+    window.addEventListener('scroll', updateProgress, { passive: true });
   </script>
 </body>
 </html>
