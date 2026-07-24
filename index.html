@@ -101,18 +101,38 @@
         <div class="flagship-grid">
           <div class="media-card">
             <div class="video-shell">
-              <video controls playsinline preload="metadata" poster="./assets/velocity-district-poster.jpg">
-                <source src="./assets/velocity-district-demo.mp4" type="video/mp4" />
-                <source src="./assets/velocity-district-demo.webm" type="video/webm" />
-                Your browser does not support embedded video. Download the demo using the link below.
-              </video>
+              <a
+                class="video-link"
+                href="https://youtu.be/650DPgPvWqc"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Watch the Velocity District systems demonstration on YouTube"
+              >
+                <img
+                  src="./assets/velocity-district-poster.jpg"
+                  alt="Velocity District vehicle systems demonstration"
+                  loading="lazy"
+                />
+                <span class="video-link-shade" aria-hidden="true"></span>
+                <span class="video-link-content">
+                  <span class="play-mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img">
+                      <path d="M8.5 6.4v11.2L17.2 12 8.5 6.4Z"></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <strong>Watch project demonstration</strong>
+                    <small>Opens on YouTube</small>
+                  </span>
+                </span>
+              </a>
             </div>
             <div class="media-meta">
               <div>
                 <strong>Playable systems demonstration</strong>
                 <span>Vehicle loop, contracts, rewards, and persistent progression</span>
               </div>
-              <a href="./assets/velocity-district-demo.mp4" download>Download video</a>
+              <a href="https://youtu.be/650DPgPvWqc" target="_blank" rel="noreferrer">Watch on YouTube</a>
             </div>
           </div>
 
